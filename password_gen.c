@@ -21,7 +21,7 @@ int stringToInt(char *stringNum) {
 }
 
 int main(int argc, char *argv[]) {
-	int length = argc > 0 ? stringToInt(argv[1]) : 32;
+	int length = argc > 1 ? stringToInt(argv[1]) : 32;
 
 	time_t t;
 	int i = 0;
