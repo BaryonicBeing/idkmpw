@@ -23,15 +23,19 @@ while getopts 't:l:u:d:' opt; do
 	esac
 done
 
+if [ "$label" == "none" ];
+then
+	read -r -p "Please set a label:"
+	label=$REPLY
+	echo "Label has been set to $label"
+fi
+
 if [ "$domain" == "none" ];
 then
 	read -r -p "Please set a domain name:"
 	domain=$REPLY
 	echo "Domain name has been set to $domain"
-else
-	domain=$domain
 fi
-echo "Domain is '${domain}'"
 
 #Load password into tmp dfecause we need to use it twice
 tmp=$(generateSeahorseEntry) 
