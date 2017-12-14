@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
+//#include <math.h>
 #include <string.h>
 
 //if you don't want the string.h just uncomment it and replace the method on lines 18 and 33.
