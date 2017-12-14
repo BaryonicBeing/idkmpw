@@ -37,7 +37,7 @@ echo "Domain is '${domain}'"
 tmp=$(generateSeahorseEntry) 
 
 #Once for adding it to the keyring
-echo $tmp | secret-tool store --label=$label user $user domain $domain
+echo $tmp | secret-tool store --label="${label}" user $user domain "${domain}"
 
 #And to copy the password to the clipboard
 echo $tmp | xclip -selection c
