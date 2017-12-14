@@ -8,7 +8,7 @@ secret-tool
 
 You need to simply call the program in your terminal and give it the essentials via parameters like this
 
-'./idkmpw.sh -l 64 -u username -d domain.name -t tag'
+'./idkmpw.sh -l 64 -u username -d domainname -t tag'
 
 ## Parameter
 
