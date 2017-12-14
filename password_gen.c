@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 int getLength(char *arr) {
 	int toReturn = 0;
@@ -9,11 +10,18 @@ int getLength(char *arr) {
 	return toReturn;
 }
 
-int main(void) {
+int stringToInt(char *stringNum) {
+	int size = getLength(stringNum) - 1;
+	int toReturn = 0;
 
-	int length;
-	printf("Please enter the length of the password: ");
-	scanf("%d", &length);
+	while('\0' != *stringNum) {
+		toReturn += (int)((*stringNum++ - 48) * pow(10, size--));
+	}
+	return toReturn;	
+}
+
+int main(int argc, char *argv[]) {
+	int length = argc > 0 ? stringToInt(argv[1]) : 32;
 
 	time_t t;
 	int i = 0;
@@ -25,5 +33,4 @@ int main(void) {
 	for (i = 0; i < length; ++i) {
 		printf("%c", (char)symbols[(int)rand() % symbols_length]);
 	}
-	printf("\n\ndone.\n");
 }
