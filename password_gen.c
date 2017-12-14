@@ -3,7 +3,7 @@
 #include <math.h>
 #include <string.h>
 
-//if you don't want the string.h just uncomment it and replce the method on lines 18 and 33.
+//if you don't want the string.h just uncomment it and replace the method on lines 18 and 33.
 /*
 int getLength(char *arr) {
 	int toReturn = 0;
@@ -12,7 +12,7 @@ int getLength(char *arr) {
 	}
 	return toReturn;
 }
-*/
+
 
 int stringToInt(char *stringNum) {
 	int size = strlen(stringNum) - 1;
@@ -23,9 +23,10 @@ int stringToInt(char *stringNum) {
 	}
 	return toReturn;	
 }
+*/
 
 int main(int argc, char *argv[]) {
-	int length = argc > 1 ? stringToInt(argv[1]) : 32;
+	int length = argc > 1 ? atoi(argv[1]) : 32;
 
 	time_t t;
 	int i = 0;
